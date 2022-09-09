@@ -42,9 +42,9 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {  
           services.AddApplicationServices(_configuration);
-             services.AddCors();
+          services.AddCors();
          
-            services.AddControllers(); 
+           services.AddControllers(); 
           services.AddIdentityServices(_configuration);
          
 
@@ -53,8 +53,7 @@ namespace API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {          
-              app.UseCors(policy=>policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
-
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -63,7 +62,9 @@ namespace API
 
             app.UseHttpsRedirection();
 
-            app.UseRouting();
+            app.UseRouting(); 
+             app.UseCors(policy=>policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
+
             app.UseAuthentication();
             app.UseAuthorization();
 

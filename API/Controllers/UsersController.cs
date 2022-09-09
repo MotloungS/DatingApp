@@ -19,7 +19,7 @@ namespace API.Controllers
             _cxt = cxt;
 
         }
-        
+        // kk
     [HttpGet]
     [AllowAnonymous]
     public async Task<ActionResult<IEnumerable<AppUser>>> GetUser(){

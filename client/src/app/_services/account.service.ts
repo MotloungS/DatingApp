@@ -41,6 +41,7 @@ register(model:any){
     )
   )
 }
+// dds
 
   //Assigning the user with the key (lookup)
   setCurrentUser(user:User){
