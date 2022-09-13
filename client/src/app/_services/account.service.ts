@@ -28,21 +28,17 @@ export class AccountService {
       })
     )
   }
+  //gttg
 register(model:any){
   return this.http.post(this.baseUrl + "account/register", model).pipe(
     map((user: User) =>{
       if(user){
         localStorage.setItem('user',JSON.stringify(user));
         this.currentUserSource.next(user);
-      }
+      }})
+      
+   )}
      
-    }
-    
-    )
-  )
-}
-// dds
-
   //Assigning the user with the key (lookup)
   setCurrentUser(user:User){
     this.currentUserSource.next(user);
