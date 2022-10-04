@@ -1,4 +1,33 @@
+<div id="card">
+    <div id="card-content">
+      <div id="card-title">
+        <h2>LOGIN</h2>  </div>
+        <div class="underline-title"></div>
+    
 <form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off">
+   
+    <div class="form-group">
+        <label for="user-email" style="padding-top:13px">
+            &nbsp;Email
+          </label>
+        <input type="text" class="form-content" name="username" [(ngModel)]="model.username" >
+        <div class="form-border"></div>
+        <label for="user-password" style="padding-top:22px">&nbsp;Password
+        </label>
+        <input type="password" class="form-content" name="password" [(ngModel)]="model.password" >
+        <div class="form-border"></div>
+        <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+    </div>
+    <!-- <div class="form-group text-center">
+        <button class="btn btn-success mr-2" type="submit">Register</button>
+        <button class="btn btn-default mr-2" (click)="cancel()" type="button">Cancel</button>
+    </div> -->
+</form>
+</div>
+</div>
+
+
+<!-- <form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off">
     <h2 class="text-center text-primary">Sign up</h2>
     <hr>
     <div class="form-group">
@@ -11,5 +40,7 @@
         <button class="btn btn-success mr-2" type="submit">Register</button>
         <button class="btn btn-default mr-2" (click)="cancel()" type="button">Cancel</button>
     </div>
-</form>
+</form> -->
+
+
 
